@@ -6,6 +6,9 @@ export async function getBedrockModel() {
     const modelId = "us.anthropic.claude-3-5-sonnet-20241022-v2:0";
     const region = process.env.AWS_REGION || 'us-east-1';
     const session = await AuthFetchAuthSessionServer();
+    if (!session || !session.credentials) {
+      throw new Error('Failed to get authentication session');
+    }
     const bedrock = createAmazonBedrock({
       region,
       accessKeyId: session.credentials.accessKeyId,
