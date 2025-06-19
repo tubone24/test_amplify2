@@ -16,12 +16,12 @@
   "devDependencies": {
     "@aws-amplify/backend": "^1.16.1",
     "@aws-amplify/backend-cli": "^1.8.0",
-    "@mastra/core": "^0.10.6",
+    "@mastra/core": "^0.10.2",
     "@types/node": "^24.0.3",
     "aws-cdk-lib": "^2.189.1",
     "constructs": "^10.4.2",
     "esbuild": "^0.25.5",
-    "mastra": "^0.10.6",
+    "mastra": "^0.10.2",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
     "zod": "^3.25.67"

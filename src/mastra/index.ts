@@ -21,3 +21,5 @@ export const getMastra = async () => {
   }
   return mastraInstance;
 };
+
+export const mastra = await getMastra();
