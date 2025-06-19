@@ -8,7 +8,9 @@ applications:
         build:
           commands:
             - env | grep -e GITHUB_TOKEN >> .env.production
-            - env | grep -e GITHUB_TOKEN >> .env.production
+            - env | grep -e CONFLUENCE_BASE_URL >> .env.production
+            - env | grep -e CONFLUENCE_API_TOKEN >> .env.production
+            - env | grep -e CONFLUENCE_USER_EMAIL >> .env.production
             - npm run build
       artifacts:
         baseDirectory: .next
