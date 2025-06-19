@@ -1,0 +1,52 @@
+{
+  "name": "test_amplify2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:mastra": "mastra dev",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@aws-amplify/backend": "^1.16.1",
+    "@aws-amplify/backend-cli": "^1.8.0",
+    "@mastra/core": "^0.10.6",
+    "@types/node": "^24.0.3",
+    "aws-cdk-lib": "^2.189.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.25.5",
+    "mastra": "^0.10.6",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "zod": "^3.25.67"
+  },
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^2.2.10",
+    "@assistant-ui/react": "^0.10.24",
+    "@assistant-ui/react-ai-sdk": "^0.10.14",
+    "@assistant-ui/react-markdown": "^0.10.5",
+    "@assistant-ui/react-ui": "^0.1.8",
+    "@aws-amplify/adapter-nextjs": "^1.6.4",
+    "@aws-amplify/ui-react": "^6.11.2",
+    "@aws-sdk/credential-providers": "^3.830.0",
+    "@tailwindcss/postcss": "^4.1.10",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "ai": "^4.3.16",
+    "autoprefixer": "^10.4.21",
+    "aws-amplify": "^6.15.1",
+    "aws-cdk": "^2.1018.1",
+    "dotenv": "^16.5.0",
+    "next": "^15.3.4",
+    "postcss": "^8.5.6",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^3.4.17"
+  }
+}
