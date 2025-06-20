@@ -11,10 +11,6 @@ applications:
             - env | grep -e CONFLUENCE_BASE_URL -e CONFLUENCE_API_TOKEN -e CONFLUENCE_USER_EMAIL -e GITHUB_TOKEN >> .env
             # Next.jsビルド
             - npm run build
-      artifacts:
-        baseDirectory: .next
-        files:
-          - '**/*'
       cache:
         paths:
           - .next/cache/**/*
