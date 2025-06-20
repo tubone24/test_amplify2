@@ -56,6 +56,12 @@ export const confluenceSearchPagesTool = createTool({
       .describe("検索結果の開始位置（ページネーション用）"),
   }),
   execute: async ({ context }) => {
+    console.log("=== Confluence Tool Debug ===");
+    console.log("CONFLUENCE_BASE_URL:", CONFLUENCE_BASE_URL ? "設定済み" : "未設定");
+    console.log("CONFLUENCE_API_TOKEN:", CONFLUENCE_API_TOKEN ? "設定済み" : "未設定");
+    console.log("CONFLUENCE_USER_EMAIL:", CONFLUENCE_USER_EMAIL ? "設定済み" : "未設定");
+    console.log("=== Debug End ===");
+
     const params = new URLSearchParams();
     params.append("cql", context.cql);
     if (context.limit) params.append("limit", context.limit.toString());

@@ -1,5 +1,12 @@
 export async function POST(req: Request) {
   try {
+    console.log("=== Server Action Debug ===");
+    console.log("GITHUB_TOKEN:", process.env.GITHUB_TOKEN ? "設定済み" : "未設定");
+    console.log("CONFLUENCE_BASE_URL:", process.env.CONFLUENCE_BASE_URL ? "設定済み" : "未設定");
+    console.log("CONFLUENCE_API_TOKEN:", process.env.CONFLUENCE_API_TOKEN ? "設定済み" : "未設定");
+    console.log("CONFLUENCE_USER_EMAIL:", process.env.CONFLUENCE_USER_EMAIL ? "設定済み" : "未設定");
+    console.log("=== Debug End ===");
+    
     const { messages } = await req.json();
     const { AuthFetchAuthSessionServer } = await import(
       "@/lib/amplify-server-utils"

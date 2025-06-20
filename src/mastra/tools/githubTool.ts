@@ -31,6 +31,11 @@ export const githubCreateIssueTool = createTool({
   execute: async ({ context }) => {
     const { owner, repo, title, body, labels, assignees, milestone } = context;
 
+    console.log("=== GitHub Tool Debug ===");
+    console.log("GITHUB_TOKEN:", process.env.GITHUB_TOKEN ? "設定済み" : "未設定");
+    console.log("GITHUB_TOKEN値の最初の5文字:", process.env.GITHUB_TOKEN?.substring(0, 5) || "なし");
+    console.log("=== Debug End ===");
+
     const token = process.env.GITHUB_TOKEN;
 
     try {
