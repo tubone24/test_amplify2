@@ -1,16 +1,21 @@
 version: 1
-frontend:
-  phases:
-    preBuild:
-      commands:
-        - npm ci
-    build:
-      commands:
-        - npm run build
-  artifacts:
-    baseDirectory: .next
-    files:
-      - '**/*'
-  cache:
-    paths:
-      - node_modules/**/*
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            # Amplifyのシークレットを環境変数としてNext.jsに注入
+            - env | grep -e CONFLUENCE_BASE_URL -e CONFLUENCE_API_TOKEN -e CONFLUENCE_USER_EMAIL -e GITHUB_TOKEN >> .env
+            # Next.jsビルド
+            - npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - .next/cache/**/*
+          - node_modules/**/*
